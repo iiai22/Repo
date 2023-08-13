@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@font-face {
+  font-family: 'Ginto-Nord';
+  src: url('fonts/Ginto-Nord-700.woff') format('woff');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfbec;
+  color: #121213;
+  font-family: 'Roboto', sans-serif;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-rows: repeat(3, 1fr);
+  width: 100vw;
+  height: 100vh;
+  float: none;
+  margin-right: -1.5rem; /* Remove a margem direita */
+  overflow: hidden;
+}
+
+.titleWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-row: 2;
+}
+
+.name {
+  letter-spacing: 4px;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Caprasimo';
+}
+
+.prof {
+  letter-spacing: 4px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Caprasimo';
+}
+
+.country {
+  letter-spacing: 4px;
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: 'Caprasimo';
+}
+
+/*--Header--*/
+
+header {
+  position: fixed;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  position: relative;
+  left: 2rem;
+  padding: 0.7rem;
+  font-size: 20px;
+  background-color: #ffc04a;
+  cursor: default;
+  font-family: 'Ginto-Nord';
+}
+
+/*--Projects--*/
+.projectsWrap {
+  grid-row: 3;
+  position: relative;
+  left: 2rem;
+}
+
+.project {
+  color: #3f3f41;
+  font-weight: 500;
+  font-size: large;
+  letter-spacing: 1px;
+}
+
+.link {
+  position: relative;
+  left: 1rem;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.vroom {
+  text-transform: uppercase;
+  font-family: 'Ginto-Nord';
+  padding: 0 1rem 0 1rem;
+  width: 30%;
+}
+
+.vroom:hover {
+  background-color: #ffc04a;
+  animation: animatedBackground 10s ease-in;
+}
+
+@keyframes animatedBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -300px 0;
+  }
+}
