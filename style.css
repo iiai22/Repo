@@ -1,10 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Caprasimo&family=Caveat:wght@700&family=Press+Start+2P&display=swap');
 @font-face {
   font-family: 'Ginto-Nord';
   src: url('fonts/Ginto-Nord-700.woff') format('woff');
 }
+/*--FONTS--*/
 
+/*
+font-family: 'Amatic SC', cursive;
+font-family: 'Caprasimo', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Press Start 2P', cursive;
+*/
+
+/*-=-=-=-=-*/
+
+/*--Main--*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -31,30 +41,36 @@
   align-items: center;
   flex-direction: column;
   grid-row: 2;
+  cursor: default;
 }
 
 .name {
   letter-spacing: 4px;
-  font-size: 50px;
+  font-size: 70px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Caprasimo';
+  font-family: 'Amatic SC';
+  /*animation: mainAnimation 16s linear infinite;*/
 }
 
 .prof {
   letter-spacing: 4px;
   font-size: 30px;
   font-weight: 700;
-  font-family: 'Caprasimo';
+  font-family: 'Caveat';
+  /*animation: mainAnimation 15.5s linear infinite;*/
 }
 
 .country {
   letter-spacing: 4px;
-  font-size: 50px;
+  font-size: 70px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Caprasimo';
+  font-family: 'Amatic SC';
+  /*animation: mainAnimation 15s linear infinite;*/
 }
+
+/*-=-=-=-=-=*/
 
 /*--Header--*/
 
@@ -63,14 +79,41 @@ header {
   height: 70px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  /*border-bottom: #ffc04a solid 2px;*/
+}
+
+.play {
+  position: relative;
+  margin: 0 2rem 0 2rem;
+  padding: 0.7rem;
+  font-size: 20px;
+  background-color: #ffc04a;
+  cursor: default;
+  font-family: 'Ginto-Nord';
+  transition: border-radius 0.3s ease;
+}
+
+.play:hover {
+  border-radius: 10px;
+}
+
+.playPause {
+  padding-left: 2px;
+  background-color: #ffc04a;
 }
 
 .logo {
   position: relative;
-  left: 2rem;
+  margin: 0 2rem 0 2rem;
   padding: 0.7rem;
   font-size: 20px;
   background-color: #ffc04a;
+  /*background: 90deg,
+  rgba(255, 192, 74, 1) 11%,
+  rgba(255, 223, 74, 1) 49%,
+  rgba(255, 250, 74, 1) 100%;*/
   cursor: default;
   font-family: 'Ginto-Nord';
 }
@@ -87,10 +130,12 @@ header {
   font-weight: 500;
   font-size: large;
   letter-spacing: 1px;
+  cursor: default;
 }
 
 .link {
   position: relative;
+  margin-top: 1rem;
   left: 1rem;
   font-size: 45px;
   font-weight: 700;
@@ -100,19 +145,53 @@ header {
   text-transform: uppercase;
   font-family: 'Ginto-Nord';
   padding: 0 1rem 0 1rem;
-  width: 30%;
+  width: 16.5rem;
+  transition: background-color 0.1s ease-in;
 }
 
 .vroom:hover {
   background-color: #ffc04a;
-  animation: animatedBackground 10s ease-in;
+  /*background: linear-gradient(
+    90deg,
+    rgba(255, 192, 74, 1) 11%,
+    rgba(255, 223, 74, 1) 49%,
+    rgba(255, 250, 74, 1) 100%
+  );*/
+  cursor: pointer;
+  animation: bg 0.3s ease-in normal forwards;
 }
 
-@keyframes animatedBackground {
+/*--Animations--*/
+@keyframes bg {
   0% {
-    background-position: 0 0;
+    width: 0%;
   }
   100% {
-    background-position: -300px 0;
+    width: 16.5rem;
   }
 }
+
+@keyframes mainAnimation {
+  0% {
+    position: relative;
+    left: 0;
+  }
+  25% {
+    position: relative;
+    left: 50vw;
+  }
+  50% {
+    position: relative;
+    left: 100vw;
+  }
+  75% {
+    position: relative;
+    right: 50vw;
+  }
+  100% {
+    position: relative;
+    right: 0;
+  }
+}
+
+/*-=-=-=-=-=-=-=*/
