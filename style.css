@@ -84,24 +84,28 @@ header {
   /*border-bottom: #ffc04a solid 2px;*/
 }
 
-.play {
-  position: relative;
-  margin: 0 2rem 0 2rem;
-  padding: 0.7rem;
-  font-size: 20px;
-  background-color: #ffc04a;
-  cursor: default;
+.play,
+.pause {
+  cursor: pointer;
   font-family: 'Ginto-Nord';
-  transition: border-radius 0.3s ease;
-}
-
-.play:hover {
-  border-radius: 10px;
+  background-color: #ffc04a;
 }
 
 .playPause {
   padding-left: 2px;
   background-color: #ffc04a;
+}
+
+.playWrap {
+  position: relative;
+  margin: 0 2rem 0 2rem;
+  padding: 0.7rem;
+  background-color: #ffc04a;
+  transition: border-radius 0.3s ease;
+}
+
+.playWrap:hover {
+  border-radius: 10px;
 }
 
 .logo {
@@ -116,6 +120,21 @@ header {
   rgba(255, 250, 74, 1) 100%;*/
   cursor: default;
   font-family: 'Ginto-Nord';
+  transition: border-radius 0.3s ease;
+}
+
+.logo:hover {
+  border-radius: 10px;
+}
+
+.contact {
+  font-size: 20px;
+  font-family: 'Ginto-Nord';
+  cursor: pointer;
+}
+
+.contact:hover {
+  border-radius: 10px;
 }
 
 /*--Projects--*/
@@ -142,11 +161,13 @@ header {
 }
 
 .vroom {
+  display: block;
   text-transform: uppercase;
   font-family: 'Ginto-Nord';
   padding: 0 1rem 0 1rem;
   width: 16.5rem;
   transition: background-color 0.1s ease-in;
+  text-decoration: none;
 }
 
 .vroom:hover {

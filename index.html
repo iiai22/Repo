@@ -10,8 +10,13 @@
   <body>
     <header>
       <a class="logo header">JPR</a>
-      <a class="play header"
-        >Play<i class="fa-solid fa-play playPause"></i
+
+      <a class="contact header">Get in touch</a>
+
+      <a class="playWrap"
+        ><span class="play">Play</span>
+        <span class="pause" style="display: none">Pause</span>
+        <i class="fa-solid fa-play playPause"></i
         ><i class="fa-solid fa-pause playPause" style="display: none"></i
       ></a>
     </header>
@@ -24,7 +29,11 @@
 
       <div class="projectsWrap">
         <p class="project">Projects</p>
-        <p class="vroom link">Vroom</p>
+        <a
+          class="vroom link"
+          href="https://vitejsvitenfz5ep-sa4z--5173--d5d65229.local-credentialless.webcontainer.io/"
+          >Vroom</a
+        >
       </div>
     </div>
     <script
@@ -32,5 +41,6 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="/main.js"></script>
+    <script type="module" src="/sendEmail.js"></script>
   </body>
 </html>
